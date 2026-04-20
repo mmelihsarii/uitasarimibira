@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Inter:wght@400;500;700&display=swap');
+
+:root {
+  --primary: #E31A1C;
+  --dark: #800000;
+  --trans: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+header.stiegl-header {
+  background: var(--primary);
+  height: 120px;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  position: relative;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 15px 15px 25px 25px;
+  text-align: center;
+}
+
+.logo span {
+  display: block;
+  color: var(--primary);
+}
+
+.logo .logo-pre {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.logo .logo-txt {
+  font-family: 'Germania One', cursive;
+  font-size: 30px;
+  margin-top: -5px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav li {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+nav li::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 12px solid transparent;
+  border-bottom-color: var(--dark);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav li:hover::before {
+  opacity: 1;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.shop-btn {
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  display: flex;
+  gap: 10px;
+}
+
+.lang {
+  color: #fff;
+  font-size: 12px;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  background: var(--dark);
+  padding: 60px 0;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s ease 0.2s;
+  z-index: 99;
+}
+
+.mega-menu.show {
+  display: block;
+  opacity: 1;
+}
+
+.mega-grid {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+.mega-logo {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mega-txt {
+  font-size: 40px !important;
+}
+
+.col h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.col a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.col a:hover {
+  color: #fff;
+}
+
+/* Mega Menu Bottom Section */
+.mega-bottom {
+  max-width: 1440px;
+  margin: 50px auto 0;
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 40px;
+}
+
+.bottom-section {
+  display: flex;
+  gap: 60px;
+}
+
+.bottom-item {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.bottom-item:hover {
+  transform: translateY(-5px);
+}
+
+.bottom-icon {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  background: transparent;
+}
+
+.icon-placeholder {
+  font-size: 24px;
+  color: #fff;
+}
+
+.bottom-item h4 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.bottom-item p {
+  color: #ccc;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.bottom-right {
+  text-align: right;
+}
+
+.bottom-right h4 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.bottom-right a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.bottom-right a:hover {
+  color: #fff;
+}

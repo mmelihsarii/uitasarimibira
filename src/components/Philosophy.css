@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&family=Inter:wght@400;700&display=swap');
+
+:root {
+  --primary-red: #E31A1C;
+  --text-dark: #000000;
+  --text-grey: #333333;
+  --bg-white: #FFFFFF;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  background-color: #FFFFFF;
+}
+
+/* Philosophy Section */
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.polaroid-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.polaroid {
+  background: white;
+  padding: 15px 15px 40px 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: rotate(-4deg);
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.polaroid:hover {
+  transform: rotate(-2deg) scale(1.02);
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content-right .subtitle {
+  color: var(--primary-red);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.content-right h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  color: var(--text-dark);
+}
+
+.body-text {
+  color: var(--text-grey);
+  font-size: 1rem;
+  line-height: 1.6;
+  column-count: 2;
+  column-gap: 40px;
+}
+
+.body-text p {
+  margin-bottom: 1rem;
+}
+
+/* Blockquote Section */
+.quote-section {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.quote-icon {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.4rem;
+  color: var(--primary-red);
+  line-height: 1;
+  margin-bottom: -10px;
+}
+
+.quote-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.76rem;
+  font-style: italic;
+  color: var(--text-dark);
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+.quote-author {
+  font-size: 0.792rem;
+  color: var(--text-grey);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .polaroid {
+    transform: rotate(-2deg);
+    margin-bottom: 40px;
+  }
+
+  .body-text {
+    column-count: 1;
+  }
+
+  .content-right h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 60px 20px;
+  }
+
+  .philosophy-grid {
+    margin-bottom: 80px;
+  }
+
+  .content-right h1 {
+    font-size: 1.8rem;
+  }
+
+  .quote-text {
+    font-size: 1.32rem;
+  }
+
+  .quote-icon {
+    font-size: 3.52rem;
+  }
+}

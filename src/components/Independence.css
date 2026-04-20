@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --primary-red: #E31A1C;
+  --bg-light: #F9F9F9;
+  --text-dark: #1A1A1A;
+  --text-grey: #4A4A4A;
+}
+
+.independence-wrapper {
+  width: 100%;
+  background-color: var(--bg-light);
+  padding: 100px 0;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Column */
+.text-content {
+  max-width: 500px;
+}
+
+.text-content h4 {
+  color: var(--primary-red);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.text-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.text-content p {
+  color: var(--text-grey);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 35px;
+  border: 1px solid var(--primary-red);
+  background: transparent;
+  color: var(--primary-red);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: var(--primary-red);
+  color: white;
+}
+
+/* Right Column */
+.visual-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.visual-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.stamp-img {
+  max-width: 320px;
+  transform: rotate(-5deg);
+  transition: transform 0.3s ease;
+}
+
+.stamp-img:hover {
+  transform: rotate(-2deg) scale(1.05);
+}
+
+.hops-flag-img {
+  max-width: 400px;
+  align-self: flex-end;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .independence-wrapper {
+    padding: 60px 0;
+  }
+
+  .section-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .text-content {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .visual-content {
+    margin-top: 40px;
+  }
+
+  .hops-flag-img {
+    align-self: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .text-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .stamp-img {
+    max-width: 250px;
+  }
+
+  .hops-flag-img {
+    max-width: 300px;
+  }
+}

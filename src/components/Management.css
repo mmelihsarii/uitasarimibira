@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --primary-red: #E31A1C;
+  --text-dark: #1A1A1A;
+  --text-grey: #4A4A4A;
+}
+
+/* 1. Üst Bölüm: Ekip */
+.management-section {
+  padding: 100px 50px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.mgmt-content h4 {
+  color: var(--primary-red);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.mgmt-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 40px;
+  color: var(--text-dark);
+}
+
+.mgmt-content p {
+  color: var(--text-grey);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.mgmt-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 2. Yumuşak Geçiş ve Logo */
+.transition-wrapper {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  background: linear-gradient(to bottom, #ffffff 0%, transparent 100%);
+  z-index: 10;
+  margin-bottom: -200px; /* Alttaki resmi altına çeker */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wildshut-logo {
+  width: 140px;
+  height: 140px;
+  background: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-align: center;
+  border: 2px solid white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  line-height: 1.3;
+}
+
+/* 3. Alt Bölüm: Hero & Overlap */
+.hero-container {
+  width: 100%;
+  position: relative;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  display: block;
+}
+
+.red-band {
+  background-color: var(--primary-red);
+  padding: 40px 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 5;
+}
+
+.red-band-text {
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.8rem;
+}
+
+.shop-btn {
+  border: 1px solid white;
+  padding: 12px 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.shop-btn:hover {
+  background: white;
+  color: var(--primary-red);
+}
+
+/* Örtüşen Beyaz Kart */
+.overlap-card {
+  position: absolute;
+  bottom: -40px; /* Kırmızı şeridin üzerine taşması için */
+  left: 10%;
+  width: 400px;
+  background: white;
+  padding: 50px 40px;
+  border-radius: 40px 40px 0 0;
+  box-shadow: 0 -15px 45px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  z-index: 20;
+}
+
+.overlap-card h4 {
+  color: var(--primary-red);
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.overlap-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  line-height: 1.1;
+  color: var(--text-dark);
+}
+
+.overlap-card p {
+  font-size: 0.9rem;
+  color: var(--text-grey);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.website-btn {
+  display: inline-block;
+  border: 1px solid var(--primary-red);
+  padding: 12px 35px;
+  color: var(--primary-red);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.website-btn:hover {
+  background: var(--primary-red);
+  color: white;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .management-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .mgmt-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .overlap-card {
+    position: relative;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .red-band {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .red-band-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .mgmt-content h2 {
+    font-size: 2rem;
+  }
+
+  .transition-wrapper {
+    height: 150px;
+    margin-bottom: -150px;
+  }
+
+  .wildshut-logo {
+    width: 100px;
+    height: 100px;
+    font-size: 0.6rem;
+  }
+
+  .hero-bg {
+    height: 60vh;
+  }
+
+  .overlap-card h3 {
+    font-size: 1.8rem;
+  }
+}
