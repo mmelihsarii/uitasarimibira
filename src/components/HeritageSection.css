@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700;1,900&family=Inter:wght@400;700&display=swap');
+
+.heritage-section {
+  position: relative;
+  background: white;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .heritage-section {
+    padding: 8rem 6rem;
+  }
+}
+
+.heritage-container {
+  max-width: 1400px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 1024px) {
+  .heritage-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+  }
+}
+
+.heritage-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .heritage-image-wrapper {
+    justify-content: flex-start;
+  }
+}
+
+.heritage-image {
+  width: 100%;
+  max-width: 28rem;
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5));
+}
+
+.heritage-badge {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4rem;
+  height: 4rem;
+  background: #A12721;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #7A1E19;
+}
+
+.heritage-year {
+  color: white;
+  font-size: 0.625rem;
+  font-weight: 700;
+}
+
+.heritage-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.heritage-label {
+  color: #E31A1C;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.heritage-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 3rem;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .heritage-title {
+    font-size: 3.75rem;
+  }
+}
+
+.heritage-description {
+  color: #8e8e8e;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  max-width: 28rem;
+  margin: 0;
+}
+
+.heritage-button {
+  border: 2px solid #E31A1C;
+  color: #E31A1C;
+  background: transparent;
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  transition: all 0.3s;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.heritage-button:hover {
+  background: #E31A1C;
+  color: white;
+}
+
+.heritage-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 16rem;
+  background: linear-gradient(to bottom, white, transparent);
+  pointer-events: none;
+  z-index: 20;
+}

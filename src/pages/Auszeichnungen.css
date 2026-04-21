@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700;1,900&family=Inter:wght@400;700&display=swap');
+
+.auszeichnungen-page {
+  min-height: 100vh;
+  background: white;
+}
+
+/* Hero Section */
+.auszeichnungen-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.auszeichnungen-hero-bg {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .auszeichnungen-hero-bg {
+    min-height: 70vh;
+    padding: 2rem 6rem;
+  }
+}
+
+.auszeichnungen-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.1);
+}
+
+.auszeichnungen-hero-content {
+  position: relative;
+  z-index: 20;
+  max-width: 42rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auszeichnungen-hero-card {
+  background: white;
+  display: inline-block;
+  padding: 1.5rem 2.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .auszeichnungen-hero-card {
+    padding: 1.5rem 2.5rem;
+  }
+}
+
+.auszeichnungen-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .auszeichnungen-hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .auszeichnungen-hero-title {
+    font-size: 3.75rem;
+  }
+}
+
+.auszeichnungen-hero-subtitle {
+  color: white;
+  font-weight: 700;
+  font-size: 1.875rem;
+  display: block;
+  margin-left: 0.5rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+  .auszeichnungen-hero-subtitle {
+    font-size: 2.25rem;
+  }
+}
+
+/* Content Section */
+.auszeichnungen-content {
+  background: white;
+  padding: 4rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .auszeichnungen-content {
+    padding: 8rem 6rem;
+  }
+}
+
+.auszeichnungen-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+/* Two Column Grid */
+.auszeichnungen-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .auszeichnungen-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+}
+
+.auszeichnungen-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.auszeichnungen-section-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: -0.5rem 0 0 0;
+}
+
+@media (min-width: 768px) {
+  .auszeichnungen-section-title {
+    font-size: 3rem;
+  }
+}
+
+.auszeichnungen-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.auszeichnungen-paragraphs p {
+  color: #8e8e8e;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.auszeichnungen-image {
+  width: 100%;
+  height: 400px;
+}
+
+@media (min-width: 768px) {
+  .auszeichnungen-image {
+    height: 600px;
+  }
+}
+
+.auszeichnungen-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Full Width Text Section */
+.auszeichnungen-full-text {
+  padding-top: 4rem;
+  border-top: 1px solid #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.auszeichnungen-final-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.875rem;
+  color: #1a1a1a;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .auszeichnungen-final-title {
+    font-size: 2.25rem;
+  }
+}
+
+.auszeichnungen-emphasis {
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.auszeichnungen-final-description {
+  color: #8e8e8e;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  max-width: 80rem;
+  margin: 0;
+}
+
+.auszeichnungen-final-statement {
+  color: #1a1a1a;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding-top: 1rem;
+  margin: 0;
+}
+
+
+/* Award Showcase Sections */
+.award-showcase {
+  background: white;
+  padding: 6rem 2rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .award-showcase {
+    padding: 6rem;
+  }
+}
+
+.award-showcase-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.award-showcase-header {
+  margin-bottom: 4rem;
+}
+
+.award-showcase-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .award-showcase-title {
+    font-size: 3rem;
+  }
+}
+
+.award-showcase-link {
+  font-size: 0.875rem;
+  color: #8e8e8e;
+  margin: 0;
+}
+
+.award-showcase-link a {
+  color: #E31A1C;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.award-showcase-link a:hover {
+  text-decoration: underline;
+}
+
+/* Award Products Grid */
+.award-products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .award-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+  }
+}
+
+/* Award Product Card */
+.award-product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.award-product-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 4 / 5;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.award-product-image {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.award-product-card:hover .award-product-image {
+  transform: scale(1.05);
+}
+
+/* Award Medal */
+.award-medal {
+  position: absolute;
+  top: 0;
+  right: -10%;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.award-medal-gold {
+  background: #D4AF37;
+}
+
+.award-medal-silber {
+  background: #C0C0C0;
+}
+
+.award-medal-bronze {
+  background: #CD7F32;
+}
+
+.award-medal-text {
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+
+/* Product Name */
+.award-product-name {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.875rem;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin: 0 0 2rem 0;
+  padding: 0 1rem;
+}
+
+/* Product Buttons */
+.award-product-buttons {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.award-product-button {
+  width: 100%;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 0.625rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.award-product-button-primary {
+  background: #E31A1C;
+  color: white;
+}
+
+.award-product-button-primary:hover {
+  background: #000;
+}
+
+.award-product-button-secondary {
+  background: #E31A1C;
+  color: white;
+}
+
+.award-product-button-secondary:hover {
+  background: #000;
+}

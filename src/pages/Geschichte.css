@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&family=Inter:wght@400;600&display=swap');
+
+:root {
+  --primary-red: #E31A1C;
+  --bg-grey: #F9F9F9;
+}
+
+.geschichte-page {
+  font-family: 'Inter', sans-serif;
+  background: white;
+}
+
+/* 1. Split Hero Section */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-left {
+  background: url('https://picsum.photos/seed/hist1/1200/1200?grayscale') center/cover;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 48px;
+}
+
+.hero-left::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.hero-card {
+  background: white;
+  padding: 40px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  line-height: 1.1;
+  max-width: 450px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.hero-right {
+  background: url('https://picsum.photos/seed/hist2/1200/1200') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #000;
+}
+
+.hero-right::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.play-btn-split {
+  width: 96px;
+  height: 96px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.play-btn-split::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 24px solid white;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  margin-left: 6px;
+}
+
+.play-btn-split:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+/* 2. Timeline Navigation */
+.timeline-nav {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  background: #000;
+  height: 220px;
+}
+
+.timeline-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-card {
+  flex: 0 0 220px;
+  scroll-snap-align: start;
+  position: relative;
+  text-decoration: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+}
+
+.nav-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  transition: all 0.7s;
+}
+
+.nav-card:hover img {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+.nav-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: background 0.3s;
+}
+
+.nav-card:hover .nav-overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.nav-content {
+  position: relative;
+  z-index: 2;
+}
+
+.nav-card h4 {
+  color: white;
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.nav-card p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 10px;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* 3. Timeline Sections */
+.timeline-section {
+  padding: 96px 0;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.timeline-section.bg-white {
+  background: white;
+}
+
+.timeline-section.bg-grey {
+  background: var(--bg-grey);
+}
+
+.watermark {
+  position: absolute;
+  right: 5%;
+  top: 0;
+  font-size: 18vw;
+  color: rgba(0, 0, 0, 0.03);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  z-index: 1;
+  pointer-events: none;
+  line-height: 1;
+  user-select: none;
+}
+
+.timeline-content {
+  position: relative;
+  z-index: 10;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.timeline-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin-bottom: 64px;
+  max-width: 768px;
+}
+
+.timeline-title .red-text {
+  color: var(--primary-red);
+}
+
+.timeline-layout {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.timeline-layout.reverse {
+  flex-direction: row-reverse;
+}
+
+.timeline-text {
+  flex: 1;
+}
+
+.text-columns {
+  color: #4a4a4a;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.text-columns.two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.text-columns.one-col {
+  max-width: 800px;
+}
+
+.bottom-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.bottom-images img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-image {
+  width: 45%;
+  flex-shrink: 0;
+}
+
+.timeline-image img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  border: 10px solid white;
+}
+
+/* 4. Intersection Visual */
+.intersection-visual {
+  position: relative;
+}
+
+.intersection-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.intersection-bg::before {
+  content: '';
+  flex: 1;
+  background: white;
+}
+
+.intersection-bg::after {
+  content: '';
+  flex: 1;
+  background: var(--bg-grey);
+}
+
+.intersection-container {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 48px;
+}
+
+.intersection-container img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.bottom-spacer {
+  height: 200px;
+  background: var(--bg-grey);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .hero-left,
+  .hero-right {
+    height: 400px;
+  }
+
+  .hero-card {
+    font-size: 2rem;
+    padding: 30px;
+  }
+
+  .timeline-layout {
+    flex-direction: column !important;
+    gap: 40px;
+  }
+
+  .timeline-image {
+    width: 100%;
+  }
+
+  .text-columns.two-cols {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .nav-card {
+    flex: 0 0 160px;
+  }
+
+  .timeline-title {
+    font-size: 2.2rem;
+  }
+
+  .timeline-content {
+    padding: 0 24px;
+  }
+
+  .watermark {
+    font-size: 25vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-section {
+    padding: 64px 0;
+  }
+
+  .hero-card {
+    font-size: 1.8rem;
+    padding: 24px;
+  }
+
+  .hero-left {
+    padding: 24px;
+  }
+
+  .timeline-title {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  .watermark {
+    font-size: 30vw;
+  }
+
+  .bottom-images {
+    grid-template-columns: 1fr;
+  }
+
+  .play-btn-split {
+    width: 80px;
+    height: 80px;
+  }
+
+  .play-btn-split::after {
+    border-left: 20px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+  }
+}
+
+/* Brauwelt Section */
+.brauwelt-section {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  background: url('https://picsum.photos/seed/museum/1920/1080') center/cover no-repeat;
+  margin-top: 150px;
+}
+
+/* Overlapping White Card */
+.overlap-card {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  width: 90%;
+  max-width: 500px;
+  padding: 50px 40px;
+  text-align: center;
+  border-radius: 40px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.overlap-card .subhead {
+  color: var(--primary-red);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.overlap-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.8rem;
+  color: #1a1a1a;
+  line-height: 1.1;
+  margin: 0 0 25px 0;
+}
+
+.overlap-card p {
+  color: #4a4a4a;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.ghost-btn-red {
+  display: inline-block;
+  padding: 15px 35px;
+  border: 1.5px solid var(--primary-red);
+  color: var(--primary-red);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.ghost-btn-red:hover {
+  background: var(--primary-red);
+  color: #fff;
+}
+
+/* Bottom Staircase Divider */
+.staircase-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  line-height: 0;
+  z-index: 5;
+}
+
+.staircase-divider svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: #333333;
+}
+
+/* Responsive for Brauwelt */
+@media (max-width: 768px) {
+  .brauwelt-section {
+    height: 550px;
+    margin-top: 120px;
+  }
+
+  .overlap-card {
+    top: -100px;
+    padding: 40px 30px;
+  }
+
+  .overlap-card h2 {
+    font-size: 2rem;
+  }
+
+  .overlap-card p {
+    font-size: 0.9rem;
+  }
+
+  .ghost-btn-red {
+    padding: 12px 30px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlap-card {
+    width: 85%;
+    padding: 35px 25px;
+  }
+
+  .overlap-card h2 {
+    font-size: 1.8rem;
+  }
+}

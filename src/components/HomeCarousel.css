@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Playfair+Display:ital,wght@1,400;1,700&display=swap');
+
+/* ============================================
+   HERO CAROUSEL SECTION - NORMAL FLOW
+   ============================================ */
+.hero-carousel-sticky {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================
+   CAROUSEL SLIDES - STACKED LAYOUT
+   ============================================ */
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+/* ============================================
+   SLIDE 1: RED BACKGROUND
+   ============================================ */
+.slide-red {
+  width: 100%;
+  height: 100%;
+  background: #E31A1C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-red-beer {
+  position: absolute;
+  left: -10%;
+  bottom: -5%;
+  height: 90%;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10;
+  filter: brightness(1.1);
+}
+
+@media (min-width: 768px) {
+  .slide-red-beer {
+    left: 5%;
+  }
+}
+
+.slide-red-content {
+  text-align: center;
+  z-index: 20;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.slide-red-title {
+  font-family: 'Hurricane', cursive;
+  font-size: 6rem;
+  color: white;
+  line-height: 0.8;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5));
+  font-style: italic;
+  letter-spacing: -0.05em;
+}
+
+@media (min-width: 768px) {
+  .slide-red-title {
+    font-size: 10rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slide-red-title {
+    font-size: 12rem;
+  }
+}
+
+.slide-red-subtitle {
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .slide-red-subtitle {
+    font-size: 1.875rem;
+  }
+}
+
+.slide-red-badge {
+  position: absolute;
+  top: 8rem;
+  right: 3rem;
+  transform: rotate(15deg) scale(0.75);
+  z-index: 30;
+  opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+  .slide-red-badge {
+    right: 6rem;
+    transform: rotate(15deg) scale(1);
+  }
+}
+
+.badge-circle {
+  width: 12rem;
+  height: 12rem;
+  border: 4px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.badge-stripe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  background: white;
+  padding: 0.25rem 0.5rem;
+  width: 110%;
+  text-align: center;
+}
+
+.badge-stripe span {
+  color: #E31A1C;
+  font-weight: 900;
+  font-size: 1.125rem;
+  letter-spacing: -0.05em;
+}
+
+.badge-text {
+  color: white;
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* SLIDE 1 BUTTON ANIMATION - 1.5s DELAY */
+.slide-button-wrapper {
+  position: absolute;
+  bottom: 6rem;
+  left: 50%;
+  transform: translateX(-150vw);
+  z-index: 40;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@media (min-width: 768px) {
+  .slide-button-wrapper {
+    left: 35%;
+  }
+}
+
+.slide-button-wrapper.animate-in {
+  animation: slideInFromLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-150vw);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 768px) {
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-150vw);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+
+.slide-button-white {
+  background: white;
+  color: #E31A1C;
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.slide-button-white:hover {
+  background: black;
+  color: white;
+  transform: scale(0.95);
+}
+
+/* ============================================
+   SLIDE 2: VIDEO BACKGROUND
+   ============================================ */
+.slide-video {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.slide-video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9) grayscale(0.2);
+}
+
+.slide-video-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.25);
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.badge-circle-dark {
+  width: 16rem;
+  height: 16rem;
+  border: 4px solid #3D1F16;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.badge-stripe-dark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  background: #3D1F16;
+  padding: 0.5rem 1rem;
+  width: 110%;
+  text-align: center;
+}
+
+.badge-stripe-dark span {
+  color: #D4AF37;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.badge-text-dark {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+  margin-top: 3rem;
+}
+
+/* SLIDE 2 CONTENT ANIMATION */
+.slide-video-content {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-150vw, -50%);
+  padding: 0 3rem;
+  z-index: 30;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@media (min-width: 768px) {
+  .slide-video-content {
+    padding: 0 6rem;
+  }
+}
+
+.slide-video-content.animate-in {
+  animation: slideInContentFromLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes slideInContentFromLeft {
+  from {
+    transform: translate(-150vw, -50%);
+  }
+  to {
+    transform: translate(0, -50%);
+  }
+}
+
+.slide-video-text-box {
+  background: white;
+  padding: 2.5rem 3.5rem;
+  box-shadow: 40px 0 60px rgba(0, 0, 0, 0.2);
+  max-width: 32rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .slide-video-text-box {
+    padding: 3.5rem;
+  }
+}
+
+.slide-video-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: black;
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .slide-video-title {
+    font-size: 3.75rem;
+  }
+}
+
+.slide-button-red {
+  background: #E31A1C;
+  color: white;
+  padding: 1.25rem 2.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.slide-button-red:hover {
+  background: black;
+  transform: scale(0.95);
+}
+
+/* ============================================
+   SLIDE 3: MOUNTAIN SCENE
+   ============================================ */
+.slide-mountain {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-mountain-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-mountain-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(191, 219, 254, 0.3) 0%, rgba(252, 231, 243, 0.2) 50%, transparent 100%);
+}
+
+.slide-mountain-white-panel {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  background: white;
+  z-index: 10;
+  clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.slide-mountain-logo {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  width: 12rem;
+}
+
+.slide-mountain-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.slide-mountain-bottles {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  padding: 0 3rem;
+}
+
+@media (min-width: 768px) {
+  .slide-mountain-bottles {
+    padding: 0 6rem;
+  }
+}
+
+.bottles-group {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: -2%;
+}
+
+.bottle {
+  object-fit: contain;
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5));
+}
+
+.bottle-1 {
+  height: 60vh;
+  z-index: 10;
+  margin-right: -20%;
+}
+
+.bottle-2 {
+  height: 75vh;
+  z-index: 20;
+  position: relative;
+  margin: 0 -8%;
+}
+
+.bottle-3 {
+  height: 68vh;
+  z-index: 10;
+}
+
+.slide-mountain-header {
+  position: absolute;
+  top: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  z-index: 30;
+}
+
+.slide-mountain-header-title {
+  font-weight: 900;
+  font-size: 3.75rem;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .slide-mountain-header-title {
+    font-size: 5rem;
+  }
+}
+
+.slide-mountain-header-blue {
+  color: #0055A4;
+}
+
+.slide-mountain-header-red {
+  color: #E31A1C;
+}
+
+/* SLIDE 3 CONTENT ANIMATION */
+.slide-mountain-content {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-150vw, -50%);
+  padding: 0 3rem;
+  z-index: 30;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@media (min-width: 768px) {
+  .slide-mountain-content {
+    padding: 0 6rem;
+  }
+}
+
+.slide-mountain-content.animate-in {
+  animation: slideInContentFromLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.slide-mountain-text-box {
+  background: white;
+  padding: 2.5rem 3.5rem;
+  box-shadow: 40px 0 60px rgba(0, 0, 0, 0.1);
+  max-width: 32rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .slide-mountain-text-box {
+    padding: 3.5rem;
+  }
+}
+
+.slide-mountain-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: black;
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .slide-mountain-title {
+    font-size: 3.75rem;
+  }
+}
+
+/* ============================================
+   NAVIGATION ARROWS
+   ============================================ */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 0.75rem;
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-arrow-left {
+  left: 0;
+}
+
+.carousel-arrow-right {
+  right: 0;
+}
+
+/* ============================================
+   PAGINATION DOTS
+   ============================================ */
+.carousel-dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.carousel-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  transition: all 0.3s;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.carousel-dot.active {
+  background: #E31A1C;
+  transform: scale(1.25);
+}
+
+/* ============================================
+   CONTENT SECTION
+   ============================================ */
+.hero-content-cover {
+  position: relative;
+  background: #ffffff;
+  min-height: 10vh;
+}

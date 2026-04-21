@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&family=Inter:wght@400;500;700&display=swap');
+
+.mediathek-page {
+  min-height: 100vh;
+  background: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.mediathek-container {
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 6rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .mediathek-container {
+    padding: 6rem 3rem;
+  }
+}
+
+/* Header */
+.mediathek-header {
+  margin-bottom: 5rem;
+}
+
+.mediathek-main-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 3rem;
+  color: #1a1a1a;
+  margin: 0 0 3rem;
+}
+
+@media (min-width: 768px) {
+  .mediathek-main-title {
+    font-size: 3.75rem;
+  }
+}
+
+.mediathek-section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.mediathek-label {
+  color: #E31A1C;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.mediathek-section-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .mediathek-section-title {
+    font-size: 3rem;
+  }
+}
+
+.mediathek-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .mediathek-intro-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.mediathek-intro-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mediathek-intro-text {
+  color: #4b5563;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  max-width: 32rem;
+  margin: 0;
+}
+
+.mediathek-color-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.75rem 3rem;
+  font-size: 0.875rem;
+}
+
+.mediathek-color-label {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.mediathek-color-value {
+  color: #6b7280;
+}
+
+.mediathek-intro-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mediathek-intro-link {
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-color: #e5e7eb;
+  transition: all 0.3s;
+}
+
+.mediathek-intro-link:hover {
+  color: #E31A1C;
+  text-decoration-color: #E31A1C;
+}
+
+/* Logo Section */
+.mediathek-logo-section {
+  padding: 5rem 0;
+  border-top: 1px solid #f9fafb;
+}
+
+.mediathek-logo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .mediathek-logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.mediathek-logo-visual {
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 50px -15px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  overflow: hidden;
+  border: 1px solid #f9fafb;
+}
+
+.mediathek-logo-visual img {
+  width: 100%;
+  height: auto;
+  max-width: 280px;
+  object-fit: contain;
+}
+
+.mediathek-logo-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mediathek-logo-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mediathek-logo-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.mediathek-logo-list {
+  list-style: disc;
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.7;
+  padding: 0;
+  margin: 0;
+}
+
+.mediathek-logo-list li::marker {
+  color: #d1d5db;
+}
+
+.mediathek-downloads-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  padding-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .mediathek-downloads-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.mediathek-downloads-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mediathek-downloads-title {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #1a1a1a;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #1a1a1a;
+  margin: 0;
+}
+
+.mediathek-downloads-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.mediathek-download-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  transition: color 0.3s;
+  color: #1a1a1a;
+}
+
+.mediathek-download-item:hover {
+  color: #E31A1C;
+}
+
+.mediathek-download-item span {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.download-icon {
+  color: #E31A1C;
+  flex-shrink: 0;
+  margin-left: 1rem;
+  transition: transform 0.3s;
+}
+
+.mediathek-download-item:hover .download-icon {
+  transform: translateY(0.125rem);
+}
+
+/* Certificates */
+.mediathek-certificates {
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.mediathek-certificates-content {
+  max-width: 48rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.mediathek-certificates-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mediathek-certificates-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .mediathek-certificates-title {
+    font-size: 3rem;
+  }
+}
+
+.mediathek-certificates-image {
+  padding: 2rem 0;
+}
+
+.mediathek-certificates-image img {
+  width: 100%;
+  height: auto;
+  max-width: 48rem;
+  margin: 0 auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.mediathek-certificates-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mediathek-certificates-text {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin: 0 auto;
+  max-width: 36rem;
+}
+
+.mediathek-certificates-button {
+  border: 1px solid #E31A1C;
+  color: #E31A1C;
+  background: transparent;
+  padding: 1rem 3rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 0.125rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.mediathek-certificates-button:hover {
+  background: #E31A1C;
+  color: white;
+}
+
+/* Lists */
+.mediathek-lists {
+  padding: 5rem 0;
+  border-top: 1px solid #f9fafb;
+}
+
+.mediathek-lists-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 768px) {
+  .mediathek-lists-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.mediathek-list-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mediathek-list-title {
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.mediathek-list-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.mediathek-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  transition: color 0.3s;
+  color: #6b7280;
+}
+
+.mediathek-list-item.active {
+  color: #E31A1C;
+}
+
+.mediathek-list-item:hover {
+  color: #E31A1C;
+}
+
+.mediathek-list-item span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+}

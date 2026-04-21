@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700;1,900&family=Inter:wght@400;700&display=swap');
+
+.braukunst-section {
+  min-height: 100vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .braukunst-section {
+    padding: 2rem 6rem;
+  }
+}
+
+.braukunst-container {
+  max-width: 1400px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .braukunst-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+  }
+}
+
+/* Sol Sütun: Tipografi */
+.braukunst-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.braukunst-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.braukunst-label {
+  color: #E31A1C;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.braukunst-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 3.75rem;
+  color: #1a1a1a;
+  line-height: 1.05;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .braukunst-title {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .braukunst-title {
+    font-size: 5rem;
+  }
+}
+
+.braukunst-description {
+  color: #8e8e8e;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  max-width: 32rem;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .braukunst-description {
+    font-size: 1.25rem;
+  }
+}
+
+.braukunst-button {
+  background: #E31A1C;
+  color: white;
+  padding: 1.25rem 3rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.braukunst-button:hover {
+  background: black;
+  transform: scale(0.95);
+}
+
+.braukunst-button:active {
+  transform: scale(0.9);
+}
+
+/* Sağ Sütun: İnteraktif Ürün Grubu */
+.braukunst-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.product-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  cursor: pointer;
+}
+
+/* Sol Görsel: Bira Bardağı */
+.product-glass {
+  height: 350px;
+  object-fit: contain;
+  transition: transform 0.275s ease-in-out;
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5));
+  z-index: 10;
+  filter: brightness(1.1) drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5));
+}
+
+@media (min-width: 768px) {
+  .product-glass {
+    height: 550px;
+  }
+}
+
+/* Sağ Görsel: Bira Şişesi */
+.product-bottle {
+  height: 400px;
+  object-fit: contain;
+  transition: transform 0.275s ease-in-out;
+  margin-left: -6rem;
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5));
+  z-index: 20;
+}
+
+@media (min-width: 768px) {
+  .product-bottle {
+    height: 650px;
+    margin-left: -8rem;
+  }
+}
+
+/* Hover Efekti: Ayrılma */
+.product-group:hover .product-glass {
+  transform: translateX(-25px);
+}
+
+.product-group:hover .product-bottle {
+  transform: translateX(25px);
+}
+
+/* Mobile için daha küçük ayrılma */
+@media (max-width: 768px) {
+  .product-group:hover .product-glass {
+    transform: translateX(-15px);
+  }
+
+  .product-group:hover .product-bottle {
+    transform: translateX(15px);
+  }
+}

@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-red: #E31A1C;
+  --text-dark: #1A1A1A;
+  --text-grey: #4A4A4A;
+  --transition: 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.geschaeftsfuehrung-page {
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+}
+
+/* Management Section */
+.management-section {
+  max-width: 1400px;
+  margin: 100px auto;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.mgmt-content h4 {
+  color: var(--primary-red);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+.mgmt-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.mgmt-content p {
+  color: var(--text-grey);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.mgmt-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Transition Wrapper */
+.transition-wrapper {
+  width: 100%;
+  background: #f5f5f5;
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.wildshut-logo {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+/* Hero Container */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: visible;
+  margin-bottom: 0;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlap-card {
+  position: absolute;
+  bottom: 50%;
+  right: 5%;
+  left: auto;
+  transform: translateY(50%) scale(0.6);
+  transform-origin: right center;
+  background: #fff;
+  padding: 35px 40px;
+  max-width: 550px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+  z-index: 20;
+}
+
+.overlap-card h4 {
+  color: var(--primary-red);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+.overlap-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.4rem;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+
+.overlap-card p {
+  color: var(--text-grey);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.website-btn {
+  display: inline-block;
+  border: 1px solid var(--primary-red);
+  color: var(--primary-red);
+  background: transparent;
+  padding: 14px 36px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.website-btn:hover {
+  background: var(--primary-red);
+  color: #fff;
+}
+
+/* Red Band */
+.red-band {
+  width: 100%;
+  background: var(--primary-red);
+  padding: 100px 5% 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.red-band-text {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+.shop-btn {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  padding: 14px 35px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  background: #fff;
+  color: var(--primary-red);
+}
+
+/* Bottles Section */
+.section-container-bottles {
+  max-width: 1440px;
+  margin: 100px auto;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 60px;
+}
+
+.col-title h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 30px;
+}
+
+.col-text p,
+.col-title p {
+  color: var(--text-grey);
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+/* Bottles Animation */
+.bottles-wrapper {
+  position: relative;
+  height: 450px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.bottle {
+  position: absolute;
+  height: 100%;
+  object-fit: contain;
+  transition: transform var(--transition), opacity var(--transition);
+  will-change: transform;
+}
+
+.bottle.left {
+  transform: translateX(-100px) rotate(-15deg);
+  z-index: 1;
+  opacity: 0;
+}
+
+.bottle.center {
+  transform: translateY(20px);
+  z-index: 3;
+  opacity: 0;
+}
+
+.bottle.right {
+  transform: translateX(100px) rotate(15deg);
+  z-index: 2;
+  opacity: 0;
+}
+
+.is-visible .bottle.left {
+  transform: translateX(-40px) rotate(-5deg);
+  opacity: 1;
+}
+
+.is-visible .bottle.center {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.is-visible .bottle.right {
+  transform: translateX(40px) rotate(5deg);
+  opacity: 1;
+}
+
+.is-visible .bottles-wrapper:not(:hover) .bottle.left {
+  transform: translateX(-25px) rotate(-2deg);
+}
+
+.is-visible .bottles-wrapper:not(:hover) .bottle.right {
+  transform: translateX(25px) rotate(2deg);
+}
+
+.bottles-wrapper:hover .bottle.left {
+  transform: translateX(-90px) rotate(-12deg);
+}
+
+.bottles-wrapper:hover .bottle.right {
+  transform: translateX(90px) rotate(12deg);
+}
+
+.bottles-wrapper:hover .bottle.center {
+  transform: scale(1.05);
+}
+
+.btn-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.sortiment-btn {
+  background-color: var(--primary-red);
+  color: white;
+  padding: 18px 45px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: background 0.3s;
+}
+
+.sortiment-btn:hover {
+  background-color: #000;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .management-section {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .section-container-bottles {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .bottles-wrapper {
+    height: 400px;
+    max-width: 400px;
+    margin: 40px auto;
+  }
+
+  .red-band {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    padding: 80px 5% 40px;
+  }
+
+  .red-band-text {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    height: 400px;
+  }
+
+  .overlap-card {
+    bottom: -60px;
+    left: 5%;
+    max-width: 250px;
+    padding: 18px 22px;
+  }
+
+  .overlap-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .wildshut-logo {
+    font-size: 2.2rem;
+  }
+
+  .mgmt-content h2 {
+    font-size: 2rem;
+  }
+
+  .col-title h3 {
+    font-size: 1.5rem;
+  }
+
+  .red-band {
+    padding: 80px 5% 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    height: 350px;
+  }
+
+  .overlap-card {
+    bottom: -50px;
+    padding: 15px 18px;
+    max-width: 220px;
+  }
+
+  .overlap-card h3 {
+    font-size: 1rem;
+  }
+
+  .wildshut-logo {
+    font-size: 1.8rem;
+  }
+
+  .red-band-text {
+    font-size: 1.4rem;
+  }
+}

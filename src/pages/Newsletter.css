@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-red: #E31A1C;
+  --text-dark: #1A1A1A;
+  --text-grey: #4A4A4A;
+}
+
+.newsletter-page {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Container */
+.newsletter-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 80px 5% 120px;
+}
+
+/* Header Image */
+.newsletter-image {
+  width: 100%;
+  margin-bottom: 50px;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.newsletter-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  display: block;
+}
+
+/* Title */
+.newsletter-title {
+  color: var(--primary-red);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  line-height: 1.3;
+}
+
+/* Form */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: var(--text-dark);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  width: 100%;
+  border: 1px solid #d0d0d0;
+  border-radius: 50px;
+  padding: 14px 24px;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: var(--primary-red);
+  box-shadow: 0 0 0 1px var(--primary-red);
+}
+
+/* Form Row (2 columns) */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* Half Width Form Group */
+.form-group-half {
+  width: 50%;
+}
+
+/* Date Input */
+.date-input-wrapper {
+  position: relative;
+}
+
+.date-input {
+  border-radius: 20px;
+  appearance: none;
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.calendar-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #999;
+}
+
+/* Submit Button */
+.form-submit {
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.submit-button {
+  background: var(--primary-red);
+  color: #fff;
+  font-weight: 700;
+  padding: 14px 50px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(227, 26, 28, 0.3);
+}
+
+.submit-button:hover {
+  background: #c11417;
+  box-shadow: 0 6px 16px rgba(227, 26, 28, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Disclaimer */
+.form-disclaimer {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.6;
+  padding-top: 20px;
+}
+
+.form-disclaimer a {
+  color: #0891b2;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.form-disclaimer a:hover {
+  color: #0e7490;
+}
+
+/* Footer */
+.newsletter-footer {
+  background: #333;
+  padding: 60px 5% 120px;
+  text-align: center;
+}
+
+.footer-divider {
+  height: 2px;
+  width: 100%;
+  background: var(--primary-red);
+  opacity: 0.5;
+  margin-bottom: 40px;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  color: #999;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.footer-address {
+  color: #777;
+  font-size: 0.7rem;
+  line-height: 1.7;
+}
+
+.footer-address p {
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .newsletter-container {
+    padding: 60px 5% 80px;
+  }
+
+  .newsletter-title {
+    font-size: 1.8rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .form-group-half {
+    width: 100%;
+  }
+
+  .form-submit {
+    justify-content: center;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter-title {
+    font-size: 1.5rem;
+  }
+
+  .form-input {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    padding: 12px 40px;
+  }
+}

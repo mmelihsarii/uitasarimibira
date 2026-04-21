@@ -1,0 +1,872 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700;1,900&family=Inter:wght@400;700&display=swap');
+
+.regionale-page {
+  min-height: 100vh;
+  background: white;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.regionale-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .regionale-hero {
+    height: 70vh;
+  }
+}
+
+.regionale-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center top;
+}
+
+.regionale-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.regionale-hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .regionale-hero-content {
+    padding: 6rem;
+  }
+}
+
+.regionale-hero-title-wrapper {
+  max-width: 64rem;
+}
+
+.regionale-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .regionale-hero-title {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .regionale-hero-title {
+    font-size: 6rem;
+  }
+}
+
+.regionale-hero-title-line {
+  background: white;
+  padding: 0.5rem 1.5rem;
+  display: inline-block;
+  width: fit-content;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.regionale-hero-subtitle {
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .regionale-hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Wertschöpfung Content Section */
+.regionale-content {
+  background: white;
+  padding: 6rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .regionale-content {
+    padding: 6rem;
+  }
+}
+
+.regionale-container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.regionale-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.regionale-label {
+  color: #E31A1C;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.regionale-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .regionale-title {
+    font-size: 3.75rem;
+  }
+}
+
+.regionale-text-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .regionale-text-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+  }
+}
+
+.regionale-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.regionale-text-col p {
+  color: #555555;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.regionale-text-bold {
+  font-weight: 700;
+  color: #1a1a1a !important;
+}
+
+/* Flora, Fauna & Agriculture Section */
+.regionale-biodiversity {
+  background: #f4f4f4;
+  padding: 6rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .regionale-biodiversity {
+    padding: 6rem;
+  }
+}
+
+.regionale-biodiversity-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.regionale-biodiversity-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .regionale-biodiversity-block {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.regionale-biodiversity-block-reverse {
+  direction: ltr;
+}
+
+@media (min-width: 768px) {
+  .regionale-biodiversity-block-reverse .regionale-biodiversity-visual {
+    order: 1;
+  }
+
+  .regionale-biodiversity-block-reverse .regionale-biodiversity-text {
+    order: 2;
+  }
+}
+
+.regionale-biodiversity-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  order: 2;
+}
+
+@media (min-width: 768px) {
+  .regionale-biodiversity-text {
+    order: 1;
+  }
+
+  .regionale-biodiversity-text-right {
+    order: 1;
+  }
+}
+
+.regionale-biodiversity-label {
+  color: #E31A1C;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.regionale-biodiversity-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .regionale-biodiversity-title {
+    font-size: 3.75rem;
+  }
+}
+
+.regionale-biodiversity-description {
+  color: #555555;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.regionale-biodiversity-button {
+  border: 2px solid #E31A1C;
+  color: #E31A1C;
+  background: transparent;
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.regionale-biodiversity-button:hover {
+  background: #E31A1C;
+  color: white;
+}
+
+.regionale-biodiversity-visual {
+  display: flex;
+  justify-content: center;
+  order: 1;
+}
+
+@media (min-width: 768px) {
+  .regionale-biodiversity-visual {
+    order: 2;
+  }
+}
+
+.regionale-biodiversity-svg {
+  width: 100%;
+  max-width: 400px;
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5));
+}
+
+.regionale-bee {
+  animation: regionale-bee-fly 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes regionale-bee-fly {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-10px, -5px);
+  }
+  50% {
+    transform: translate(10px, 5px);
+  }
+  75% {
+    transform: translate(-5px, 10px);
+  }
+}
+
+/* News/Blog Grid Section */
+.regionale-news {
+  background: white;
+  padding: 6rem 2rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .regionale-news {
+    padding: 6rem;
+  }
+}
+
+.regionale-news-container {
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+.regionale-news-header {
+  margin-bottom: 4rem;
+}
+
+.regionale-news-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .regionale-news-title {
+    font-size: 3rem;
+  }
+}
+
+.regionale-news-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 640px) {
+  .regionale-news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .regionale-news-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.regionale-news-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+}
+
+.regionale-news-card-image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.regionale-news-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s;
+}
+
+.regionale-news-card:hover .regionale-news-card-image img {
+  transform: scale(1.05);
+}
+
+.regionale-news-card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-top: 1.5rem;
+  color: #1a1a1a;
+}
+
+.regionale-news-card-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin: 0 0 auto 0;
+  transition: color 0.3s;
+}
+
+.regionale-news-card:hover .regionale-news-card-title {
+  color: #E31A1C;
+}
+
+.regionale-news-card-meta {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.625rem;
+  color: #999;
+  letter-spacing: 0.05em;
+}
+
+.regionale-news-card-link {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: all 0.3s;
+}
+
+.regionale-news-card:hover .regionale-news-card-link {
+  text-decoration: underline;
+  text-decoration-color: #E31A1C;
+  text-underline-offset: 4px;
+}
+
+
+/* Slow Food & Einfach Slow 3-Column Section */
+.regionale-slow-food {
+  background: white;
+  padding: 6rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .regionale-slow-food {
+    padding: 6rem;
+  }
+}
+
+.regionale-slow-food-container {
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+.regionale-slow-food-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .regionale-slow-food-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+  }
+}
+
+.regionale-slow-food-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.regionale-slow-food-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .regionale-slow-food-header {
+    min-height: 160px;
+  }
+}
+
+.regionale-slow-food-label {
+  color: #E31A1C;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.regionale-slow-food-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .regionale-slow-food-title {
+    font-size: 3rem;
+  }
+}
+
+.regionale-slow-food-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.regionale-slow-food-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.regionale-slow-food-logo-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.regionale-slow-food-logo-subtitle {
+  font-size: 0.625rem;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.regionale-slow-food-image {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 4px solid white;
+}
+
+.regionale-slow-food-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s;
+}
+
+.regionale-slow-food-image:hover img {
+  transform: scale(1.05);
+}
+
+.regionale-slow-food-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.regionale-slow-food-text p {
+  color: #555555;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.regionale-slow-food-bold {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.regionale-slow-food-button-wrapper {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .regionale-slow-food-button-wrapper {
+    grid-column: 2;
+  }
+}
+
+.regionale-slow-food-button {
+  border: 2px solid #E31A1C;
+  color: #E31A1C;
+  background: transparent;
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.regionale-slow-food-button:hover {
+  background: #E31A1C;
+  color: white;
+}
+
+.regionale-slow-food-button:active {
+  transform: scale(0.95);
+}
+
+
+/* Partner/Cooperation List Section */
+.regionale-partners {
+  background: white;
+  padding: 6rem 2rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .regionale-partners {
+    padding: 6rem;
+  }
+}
+
+.regionale-partners-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+
+/* Z-Pattern Layout (Studie & Sustainability Report) */
+.regionale-study {
+  background: #f4f4f4;
+  padding: 8rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .regionale-study {
+    padding: 8rem 6rem;
+  }
+}
+
+.regionale-study-container {
+  max-width: 96rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.regionale-study-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .regionale-study-block {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.regionale-study-block-reverse {
+  direction: ltr;
+}
+
+@media (min-width: 768px) {
+  .regionale-study-block-reverse .regionale-study-visual {
+    order: 1;
+  }
+
+  .regionale-study-block-reverse .regionale-study-text {
+    order: 2;
+  }
+}
+
+.regionale-study-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.regionale-study-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.regionale-study-label {
+  color: #E31A1C;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.regionale-study-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 3rem;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .regionale-study-title {
+    font-size: 3.75rem;
+  }
+}
+
+.regionale-study-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.regionale-study-description p {
+  color: #1a1a1a;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.regionale-study-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.regionale-study-image-wrapper {
+  position: relative;
+}
+
+.regionale-study-image {
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  transform: rotate(2deg);
+  transition: transform 0.5s;
+  border: 10px solid white;
+}
+
+.regionale-study-image-wrapper-reverse .regionale-study-image {
+  transform: rotate(-2deg);
+}
+
+.regionale-study-image:hover {
+  transform: rotate(0deg);
+}
+
+.regionale-study-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.regionale-study-download {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.regionale-study-download-label {
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 1.125rem;
+}
+
+.regionale-study-download-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #9ca3af;
+  padding-bottom: 1rem;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.regionale-study-download-item:hover {
+  border-color: #E31A1C;
+}
+
+.regionale-study-download-text {
+  color: #4b5563;
+  font-size: 1.125rem;
+  transition: color 0.3s;
+}
+
+.regionale-study-download-item:hover .regionale-study-download-text {
+  color: #E31A1C;
+}
+
+.regionale-study-download-icon {
+  color: #E31A1C;
+}
+
+.regionale-study-download-icon svg {
+  transition: transform 0.3s;
+}
+
+.regionale-study-download-item:hover .regionale-study-download-icon svg {
+  transform: translateY(0.25rem);
+}
+
+.regionale-study-button {
+  border: 2px solid #E31A1C;
+  color: #E31A1C;
+  background: transparent;
+  padding: 1rem 3rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.regionale-study-button:hover {
+  background: #E31A1C;
+  color: white;
+}
+
+.regionale-study-button:active {
+  transform: scale(0.95);
+}
+
+/* Bottom Staircase Shape Divider */
+.regionale-study-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 10;
+  transform: translateY(1px);
+}
+
+.regionale-study-divider-svg {
+  position: relative;
+  display: block;
+  width: 120%;
+  height: 80px;
+}

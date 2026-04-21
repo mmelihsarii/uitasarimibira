@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700;1,900&family=Inter:wght@400;700&display=swap');
+
+.b2b-section {
+  position: relative;
+  width: 100%;
+}
+
+/* Top Section with White Background */
+.b2b-top-section {
+  background: white;
+  padding: 8rem 2rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .b2b-top-section {
+    padding: 8rem 2rem 2rem;
+  }
+}
+
+.b2b-card-container {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+/* Overlapping Card */
+.b2b-card {
+  background: white;
+  border-radius: 2.5rem;
+  padding: 2.25rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+  z-index: 30;
+  margin-bottom: -6rem;
+}
+
+@media (min-width: 768px) {
+  .b2b-card {
+    padding: 3.75rem;
+    margin-bottom: -8rem;
+  }
+}
+
+.b2b-label {
+  color: #E31A1C;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.b2b-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.25rem;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0 0 1.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .b2b-title {
+    font-size: 2.8rem;
+  }
+}
+
+.b2b-description {
+  color: #8e8e8e;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0 0 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .b2b-description {
+    font-size: 1.05rem;
+  }
+}
+
+.b2b-button {
+  border: 2px solid #E31A1C;
+  color: #E31A1C;
+  background: transparent;
+  padding: 1rem 3.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.b2b-button:hover {
+  background: #E31A1C;
+  color: white;
+}
+
+/* Background Image Section */
+.b2b-background {
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .b2b-background {
+    height: 80vh;
+  }
+}
+
+.b2b-background-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
